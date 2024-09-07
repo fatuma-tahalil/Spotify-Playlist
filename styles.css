@@ -1,0 +1,26 @@
+body{
+    background-color:#121212;
+    display:flex;
+    justify-content: center;
+}
+.container{
+    width:800px; 
+    height:100%;
+    align-self:center;
+    background-color: #343232cc;
+    border-radius: 3%;
+}
+.header{
+    display:flex;
+    justify-content:start;
+    height:10%;
+    padding:1%;
+}
+.header h1{
+    color:rgba(255, 255, 255, 0.775);
+    font-family: SpotifyMixUITitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+}
+.header img{
+    max-height:60px;
+    margin-right:2%;
+}
