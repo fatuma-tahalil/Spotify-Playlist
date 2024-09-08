@@ -59,6 +59,7 @@ h1, p {
     flex-direction:column; 
     width:70%;
 }
+.queue .up-next p{align-self:center; font-size:17px;}
 .queue .up-next .next-box{
     display:flex;
     flex-direction:row;
@@ -70,4 +71,26 @@ h1, p {
     margin-right:1%;
     background-color:#121212;
     border-radius: 10px;
+}
+
+/*Section 3: Favourite artists*/
+.fav-artists{
+    height:22%;
+}
+.fav-artists .artist-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.fav-artists .artist-container .artists{
+    border-radius:40px;
+    height:80px;
+    width:80px;
+    background-color:#121212;
+    border:1px solid rgba(69, 223, 69, 0.692);
+}
+
+/*Section 4: Playlists*/
+.playlists{
+    display:flex;
 }
