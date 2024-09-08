@@ -27,7 +27,7 @@ h1, p {
 .header h1{
     color:rgba(255, 255, 255, 0.775);
 }
-.header img{
+.header svg{
     max-height:60px;
     margin-right:2%;
 }
@@ -83,11 +83,10 @@ h1, p {
     justify-content:space-around;
 }
 .fav-artists .artist-container .artists{
-    border-radius:40px;
-    height:80px;
-    width:80px;
+    border-radius:50px;
+    height:100px;
+    width:100px;
     background-color:#121212;
-    border:1px solid rgba(69, 223, 69, 0.692);
 }
 
 /*Section 4: Playlists*/
@@ -106,4 +105,28 @@ h1, p {
     width:160px;
     border-radius: 10px;
     background-color:#121212;
+}
+
+footer{
+    margin-top:30px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+footer #code a{
+    text-decoration: none;
+    color:#0bb06c;
+}
+footer #github{
+    display:flex;
+    flex-direction:row;
+}
+footer #github a, img{
+    max-height:30px;
+    align-self:center;
+    margin-left:5px;
+}
+footer #github p{
+    margin-right:1%;
+    white-space:nowrap;
 }
