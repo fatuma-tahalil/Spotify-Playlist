@@ -8,6 +8,10 @@ body{
 h1, p {
     font-family:SpotifyMixUITitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
 }
+h1{
+    font-size:20px;
+}
+.space{height:15px;}
 /*Contains the page*/
 .container{
     width:800px; 
@@ -25,10 +29,11 @@ h1, p {
     padding:1%;
 }
 .header h1{
-    color:rgba(255, 255, 255, 0.775);
+    color:#FFFFFF;
+    font-size:30px;
 }
 .header svg{
-    max-height:60px;
+    max-height:70px;
     margin-right:2%;
 }
 
@@ -45,12 +50,9 @@ h1, p {
     width:30%;
     padding-left:2%;
 }
-.queue .current-listening h1{
-    font-size:20px;
-}
 .queue .current-listening #current{
     height:170px;
-    width:90%;
+    width:210px;
     border-radius: 10px;
     background-color:#121212;
 }
@@ -73,7 +75,38 @@ h1, p {
     border-radius: 10px;
 }
 
-/*Section 3: Favourite artists*/
+/*Section 3: Most listened songs*/
+.most-listened{
+    display:flex;
+    flex-flow:row;
+}
+.most-listened .top-song{
+    display:flex;
+    flex-direction:column;
+    width:30%;
+    padding-left:2%;
+    margin-right:80px;
+}
+.most-listened .top-song #song1{
+    height:170px;
+    width:210px;
+    border-radius: 10px;
+    background-color:#121212;
+}
+.most-listened .song-grid{/*Grid container*/
+    display:grid;
+    grid-template-columns:repeat(4, minmax(30%, 40%));
+    grid-template-rows:repeat(3, minmax(30%, 40%));
+    row-gap: 4px;
+    column-gap: 5px;
+}
+.most-listened .song-grid .grid-item{/*Grid item*/
+    background-color:#121212;
+    width:80px;
+    height:80px;
+    border-radius: 5px;
+}
+/*Section 4: Favourite artists*/
 .fav-artists{
     height:22%;
 }
@@ -89,7 +122,7 @@ h1, p {
     background-color:#121212;
 }
 
-/*Section 4: Playlists*/
+/*Section 5: Playlists*/
 .playlists-container{
     display:flex;
     flex-direction:column;
@@ -107,6 +140,7 @@ h1, p {
     background-color:#121212;
 }
 
+/*Section 6: Footer*/
 footer{
     margin-top:30px;
     display:flex;
@@ -121,12 +155,7 @@ footer #github{
     display:flex;
     flex-direction:row;
 }
-footer #github a, img{
-    max-height:30px;
-    align-self:center;
-    margin-left:5px;
-}
-footer #github p{
-    margin-right:1%;
-    white-space:nowrap;
+footer #github a img{
+    max-height:40px;
+    margin-left:10px;
 }
