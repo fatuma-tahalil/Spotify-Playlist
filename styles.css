@@ -91,6 +91,19 @@ h1, p {
 }
 
 /*Section 4: Playlists*/
-.playlists{
+.playlists-container{
     display:flex;
+    flex-direction:column;
+    height:22%;
+}
+.playlists-container .playlist-list{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.playlists-container .playlist-list .playlist{
+    height:150px;
+    width:160px;
+    border-radius: 10px;
+    background-color:#121212;
 }
