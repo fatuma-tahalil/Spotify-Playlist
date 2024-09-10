@@ -149,8 +149,10 @@ footer{
 }
 footer #code a{
     text-decoration: none;
-    color:#0bb06c;
+    color:#FFFFFF;
 }
+footer #code a:hover{color:#0bb06c;text-decoration:underline;}
+/*TODO: Make github SVG larger when hovered over*/
 footer #github{
     display:flex;
     flex-direction:row;
@@ -158,4 +160,7 @@ footer #github{
 footer #github a img{
     max-height:40px;
     margin-left:10px;
+}
+footer #github a img:hover{
+    max-height:45px;
 }
