@@ -1,2 +1,2 @@
 # Spotify-Playlist
-Shows my sisters Spotify account.
+A website that shows my sisters Spotify account.
