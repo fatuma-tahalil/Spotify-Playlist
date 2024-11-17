@@ -1,19 +1,22 @@
-var client_id = 'CLIENT_ID';
-var redirect_uri = 'http://localhost:8888/callback';
+var client_id = '07c70ef841674ff4aebc0dbcbcfe42fe';
+var client_secret = 'c599ef8cb7e144dea3192a600a8b90a9'
 
-var app = express();
+var authOptions = {
+    url: 'https://accounts.spotify.com/api/token',
+    headers: {
+        'Authorization' : 'Basic ' + (new Buffer.from(client_id + ':' + client_secret).toString('base64'))
+    },
+    form: {
+        grant_type: 'client_crediental'
+    },
+    json: true
+};
 
-app.get('/login', function(req, res) {
-
-  var state = generateRandomString(16);
-  var scope = 'user-read-private user-read-email';
-
-  res.redirect('https://accounts.spotify.com/authorize?' +
-    querystring.stringify({
-      response_type: 'code',
-      client_id: client_id,
-      scope: scope,
-      redirect_uri: redirect_uri,
-      state: state
-    }));
+request.post(authOptions, function(error, response, body){
+    if (!error && response.statusCode === 200) {
+        var token = body.access_token;
+       // console.log(token);
+    }
 });
+
+
