@@ -1,5 +1,6 @@
-var client_id = process.env.client_id
-var client_secret = process.env.client_secret   
+
+var client_id = process.env.CLIENT_ID
+var client_secret = process.env.CLIENT_SECRET 
 
 var authOptions = {
     url: 'https://accounts.spotify.com/api/token',
