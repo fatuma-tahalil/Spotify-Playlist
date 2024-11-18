@@ -1,10 +1,15 @@
+from multiprocessing import process
 import requests
 import json
 import base64
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 #Authentication application to spotify server
-CLIENT_ID = "07c70ef841674ff4aebc0dbcbcfe42fe"
-CLIENT_SECRET = "c599ef8cb7e144dea3192a600a8b90a9"
+CLIENT_ID = process.env.CLIENT_ID
+CLIENT_SECRET = process.env.CLIENT_SECRET
 
 # Obtains an access token from the spotify API
 def get_token():
@@ -25,6 +30,6 @@ def get_token():
 
 def get_auth_token(token):
     return {"Authorization": "Bearer " + token}
-    console.log(token)
+    print(str(token))
 
 token = get_token()
